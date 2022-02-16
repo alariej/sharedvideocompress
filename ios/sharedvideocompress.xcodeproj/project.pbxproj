@@ -14,6 +14,9 @@
 		6172F2D35A4C3AA820D92908 /* libPods-sharedvideocompress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-sharedvideocompress.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-sharedvideocompress-sharedvideocompressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-sharedvideocompress-sharedvideocompressTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A95C436F27BD5826008FD9E3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C436E27BD5826008FD9E3 /* ShareViewController.swift */; };
+		A95C437227BD5826008FD9E3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95C437027BD5826008FD9E3 /* MainInterface.storyboard */; };
+		A95C437627BD5826008FD9E3 /* ShareExtensionSVC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A95C436C27BD5826008FD9E3 /* ShareExtensionSVC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +27,28 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = sharedvideocompress;
 		};
+		A95C437427BD5826008FD9E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A95C436B27BD5826008FD9E3;
+			remoteInfo = ShareExtensionSVC;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A95C437727BD5826008FD9E3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A95C437627BD5826008FD9E3 /* ShareExtensionSVC.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* sharedvideocompressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharedvideocompressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +64,12 @@
 		6423831EA8574132BED9D8CC /* libPods-sharedvideocompress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sharedvideocompress.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-sharedvideocompress-sharedvideocompressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedvideocompress-sharedvideocompressTests.debug.xcconfig"; path = "Target Support Files/Pods-sharedvideocompress-sharedvideocompressTests/Pods-sharedvideocompress-sharedvideocompressTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = sharedvideocompress/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A95C436C27BD5826008FD9E3 /* ShareExtensionSVC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtensionSVC.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95C436E27BD5826008FD9E3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		A95C437127BD5826008FD9E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A95C437327BD5826008FD9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95C437B27BD585C008FD9E3 /* sharedvideocompress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = sharedvideocompress.entitlements; path = sharedvideocompress/sharedvideocompress.entitlements; sourceTree = "<group>"; };
+		A95C437C27BD5942008FD9E3 /* ShareExtensionSVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtensionSVC.entitlements; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-sharedvideocompress-sharedvideocompressTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sharedvideocompress-sharedvideocompressTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A881CF5CF3F2B244570E2A /* Pods-sharedvideocompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedvideocompress.debug.xcconfig"; path = "Target Support Files/Pods-sharedvideocompress/Pods-sharedvideocompress.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-sharedvideocompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharedvideocompress.release.xcconfig"; path = "Target Support Files/Pods-sharedvideocompress/Pods-sharedvideocompress.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +90,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6172F2D35A4C3AA820D92908 /* libPods-sharedvideocompress.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95C436927BD5826008FD9E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +123,7 @@
 		13B07FAE1A68108700A75B9A /* sharedvideocompress */ = {
 			isa = PBXGroup;
 			children = (
+				A95C437B27BD585C008FD9E3 /* sharedvideocompress.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -119,6 +157,7 @@
 				13B07FAE1A68108700A75B9A /* sharedvideocompress */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* sharedvideocompressTests */,
+				A95C436D27BD5826008FD9E3 /* ShareExtensionSVC */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
@@ -133,8 +172,20 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* sharedvideocompress.app */,
 				00E356EE1AD99517003FC87E /* sharedvideocompressTests.xctest */,
+				A95C436C27BD5826008FD9E3 /* ShareExtensionSVC.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A95C436D27BD5826008FD9E3 /* ShareExtensionSVC */ = {
+			isa = PBXGroup;
+			children = (
+				A95C437C27BD5942008FD9E3 /* ShareExtensionSVC.entitlements */,
+				A95C436E27BD5826008FD9E3 /* ShareViewController.swift */,
+				A95C437027BD5826008FD9E3 /* MainInterface.storyboard */,
+				A95C437327BD5826008FD9E3 /* Info.plist */,
+			);
+			path = ShareExtensionSVC;
 			sourceTree = "<group>";
 		};
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
@@ -145,7 +196,6 @@
 				6C97AB639B58BBB4B15BBE30 /* Pods-sharedvideocompress-sharedvideocompressTests.debug.xcconfig */,
 				1D0AE47A65C8663E3B452821 /* Pods-sharedvideocompress-sharedvideocompressTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,15 +235,34 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
 				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
+				A95C437727BD5826008FD9E3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A95C437527BD5826008FD9E3 /* PBXTargetDependency */,
 			);
 			name = sharedvideocompress;
 			productName = sharedvideocompress;
 			productReference = 13B07F961A680F5B00A75B9A /* sharedvideocompress.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A95C436B27BD5826008FD9E3 /* ShareExtensionSVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A95C437A27BD5826008FD9E3 /* Build configuration list for PBXNativeTarget "ShareExtensionSVC" */;
+			buildPhases = (
+				A95C436827BD5826008FD9E3 /* Sources */,
+				A95C436927BD5826008FD9E3 /* Frameworks */,
+				A95C436A27BD5826008FD9E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtensionSVC;
+			productName = ShareExtensionSVC;
+			productReference = A95C436C27BD5826008FD9E3 /* ShareExtensionSVC.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,6 +270,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -209,6 +279,9 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					A95C436B27BD5826008FD9E3 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -227,6 +300,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* sharedvideocompress */,
 				00E356ED1AD99517003FC87E /* sharedvideocompressTests */,
+				A95C436B27BD5826008FD9E3 /* ShareExtensionSVC */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +319,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95C436A27BD5826008FD9E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95C437227BD5826008FD9E3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +498,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A95C436827BD5826008FD9E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95C436F27BD5826008FD9E3 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -424,7 +514,23 @@
 			target = 13B07F861A680F5B00A75B9A /* sharedvideocompress */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		A95C437527BD5826008FD9E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A95C436B27BD5826008FD9E3 /* ShareExtensionSVC */;
+			targetProxy = A95C437427BD5826008FD9E3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A95C437027BD5826008FD9E3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A95C437127BD5826008FD9E3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
@@ -432,6 +538,7 @@
 			baseConfigurationReference = 6C97AB639B58BBB4B15BBE30 /* Pods-sharedvideocompress-sharedvideocompressTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W988UQ8696;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -460,6 +567,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = W988UQ8696;
 				INFOPLIST_FILE = sharedvideocompressTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,9 +590,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0A881CF5CF3F2B244570E2A /* Pods-sharedvideocompress.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = sharedvideocompress/sharedvideocompress.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W988UQ8696;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = sharedvideocompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -508,9 +619,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D00AAFFCFCFDA5787532823F /* Pods-sharedvideocompress.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = sharedvideocompress/sharedvideocompress.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W988UQ8696;
 				INFOPLIST_FILE = sharedvideocompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,6 +765,84 @@
 			};
 			name = Release;
 		};
+		A95C437827BD5826008FD9E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionSVC/ShareExtensionSVC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = W988UQ8696;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtensionSVC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtensionSVC;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.sharedvideocompress.ShareExtensionSVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A95C437927BD5826008FD9E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionSVC/ShareExtensionSVC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W988UQ8696;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtensionSVC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtensionSVC;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.sharedvideocompress.ShareExtensionSVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -677,6 +869,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A95C437A27BD5826008FD9E3 /* Build configuration list for PBXNativeTarget "ShareExtensionSVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95C437827BD5826008FD9E3 /* Debug */,
+				A95C437927BD5826008FD9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
