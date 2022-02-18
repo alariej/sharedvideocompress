@@ -58,3 +58,5 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+.vscode/.react/debuggerWorker.js
+.vscode/launch.json
