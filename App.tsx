@@ -8,107 +8,110 @@
  * @format
  */
 
-import React from 'react';
+import React, { ReactElement, useState } from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section: React.FC<{
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import Compressor from './Compressor';
+import ShareHandler, { SharedContent } from './ShareHandler';
+import VideoPlayer from './VideoPlayer';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const sharedVideoInit: SharedContent = {
+    uri: '',
+    mimeType: '',
+    fileName: '',
+    fileSize: 0,
+  }
+
+  let [sharedVideo, setSharedVideo] = useState(sharedVideoInit);
+
+  const shareContent = (event: { url: string }) => {
+
+    console.log('*********************app.sharecontent')
+    console.log('event', event)
+
+    const sharedVideo_ = ShareHandler.shareContent(event.url);
+
+    if (sharedVideo.fileName !== sharedVideo_.fileName) {
+      setSharedVideo(sharedVideoInit);
+      setTimeout(() => {
+        setSharedVideo(sharedVideo_);
+      }, 250);
+    }
+  }
+
+  ShareHandler.launchedFromSharedContent(shareContent);
+
+  ShareHandler.addListener(shareContent);
+
+  let videoPlayer: ReactElement | undefined;
+  let compressor: ReactElement | undefined;
+  if (sharedVideo.uri) {
+    videoPlayer = (
+      <VideoPlayer
+        uri={ sharedVideo.uri }
+        mimeType={ sharedVideo.mimeType }
+        fileName={ sharedVideo.fileName }
+      />
+    )
+    compressor = (
+      <Compressor
+        uri={ sharedVideo.uri!}
+        mimeType={ sharedVideo.mimeType }
+        fileName={ sharedVideo.fileName }
+        fileSize={ sharedVideo.fileSize }
+      />
+    )
+  }
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+        <View style={styles.containerText}>
+          <Text
+            style={styles.text}>
+            Shared Video Compressor
+          </Text>
         </View>
-      </ScrollView>
+        <View style={styles.containerVideo}>
+          { videoPlayer }
+        </View>
+        <View style={styles.containerCompressor}>
+          { compressor }
+        </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  text: {
+    alignSelf: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  container: {
+    flex: 1,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  containerText: {
+    flex: 1,
+    margin: 4,
+    justifyContent: 'center',
+    backgroundColor: 'lime'
   },
-  highlight: {
-    fontWeight: '700',
+  containerVideo: {
+    flex: 8,
+    margin: 4,
+  },
+  containerCompressor: {
+    flex: 4,
+    margin: 4,
+    backgroundColor: 'cyan'
   },
 });
 
