@@ -1,6 +1,5 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import RNFS from 'react-native-fs';
 import { getVideoMetaData, Video } from 'react-native-compressor';
 
 const styles = StyleSheet.create({
@@ -95,31 +94,12 @@ export default class Compressor extends React.Component<CompressorProps, Compres
             metaOut: undefined
         });
 
-        // *** uncomment to compress cached file instead of shared uri ***
-        /*
-        const videoPathTemp = RNFS.CachesDirectoryPath + '/' + this.props.fileName;
-        console.log('temppath', videoPathTemp)
-
-        const tempExists = await RNFS.exists(videoPathTemp).catch(console.log);
-
-        if (tempExists) {
-            await RNFS.unlink(videoPathTemp).catch(console.log);
-        }
-
-        await RNFS.copyFile(this.props.uri.replace('file://', ''), videoPathTemp).catch(console.log);
-
-        const metaTemp = await getVideoMetaData('file://' + videoPathTemp).catch(console.log);
-        console.log('metaData-Temp', metaTemp)
-        */
-
         const compressionProgress = (progress: number) => {
             this.setState({ progress: progress })
         };
 
         const compressUri = await Video.compress(
-            // *** comment / uncomment to compress cached file instead of shared uri ***
             this.props.uri,
-            // 'file://' + videoPathTemp,
             {
                 compressionMethod: 'auto',
                 maxSize: 1024,
